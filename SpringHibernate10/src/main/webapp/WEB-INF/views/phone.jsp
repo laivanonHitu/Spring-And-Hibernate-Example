@@ -136,8 +136,8 @@ a.btn {
 					<td>${phone.name}</td>
 					<td>${phone.review}</td>
 					<td><a href="<c:url value='/edit/${phone.id}' />"
-						class="button">Edit</a> <a
-						href="<c:url value='/remove/${phone.id}' />" class="btn">Delete</a></td>
+						class="button">Edit</a> 
+						<a href="<c:url value='/remove/${phone.id}' />" class="btn">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

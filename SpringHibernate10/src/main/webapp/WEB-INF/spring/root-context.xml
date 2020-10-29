@@ -56,26 +56,19 @@
 		</beans:property>
 	</beans:bean>
 
-	<beans:bean id="phoneDAO"
-		class="com.spring.demo.dao.PhoneDAOImpl">
-		<beans:property name="sessionFactory"
-			ref="hibernate4AnnotatedSessionFactory" />
+	<beans:bean id="phoneDAO" class="com.spring.demo.dao.PhoneDAOImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 	
-	<beans:bean id="phoneService"
-		class="com.spring.demo.service.PhoneServiceImpl">
+	<beans:bean id="phoneService" class="com.spring.demo.service.PhoneServiceImpl">
 		<beans:property name="phoneDAO" ref="phoneDAO"></beans:property>
 	</beans:bean>
-	<context:component-scan
-		base-package="com.spring.demo" />
+	<context:component-scan base-package="com.spring.demo" />
 
-	<tx:annotation-driven
-		transaction-manager="transactionManager" />
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<beans:bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<beans:property name="sessionFactory"
-			ref="hibernate4AnnotatedSessionFactory" />
+	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 
 

@@ -18,6 +18,7 @@ public class PhoneController {
 
 	@Autowired(required = true)
 	@Qualifier(value = "phoneService")
+
 	public void setPhoneService(PhoneService ps) {
 		this.phoneService = ps;
 	}
@@ -30,6 +31,7 @@ public class PhoneController {
 	}
 
 	@RequestMapping(value = "/phone/add", method = RequestMethod.POST)
+	
 	public String addPhone(@ModelAttribute("phone") Phone p) {
 		if (p.getId() == 0) {
 			// new phone, add it
